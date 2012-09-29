@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="ru.yandex.android.example.apklib"
+      >
+    <application android:label="@string/apklib_name" android:icon="@drawable/ic_launcher">
+        <activity android:name="ru.yandex.android.example.apklib.ApkLibActivity"
+                  android:label="@string/apklib_name">
+        </activity>
+    </application>
+</manifest>

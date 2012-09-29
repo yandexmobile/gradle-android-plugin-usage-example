@@ -1,0 +1,40 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+
+group = 'ru.yandex.android'
+version = '1.00-SNAPSHOT'
+
+buildscript {
+    repositories {
+        ivy{name "local"; url 'file://' + new File(System.getProperty('user.home'), '.yandex/ivy-repo').absolutePath}
+        mavenCentral()
+    }
+    dependencies {
+        classpath "ru.yandex.gradle.android:gradle-android-plugin:1.00"
+    }
+}
+
+apply plugin: 'apklib'
+
+repositories {
+    mavenCentral()
+    ivy{name "local"; url 'file://' + new File(System.getProperty('user.home'), '.yandex/ivy-repo').absolutePath}
+}
+
+configurations.all {
+    resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+}
+
+dependencies {
+}
+
+uploadArchives {
+   repositories {
+       add project.repositories.local
+   }
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '1.2'
+}
+

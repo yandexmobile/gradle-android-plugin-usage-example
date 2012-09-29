@@ -1,0 +1,3 @@
+include 'apklib', 'apklibapp'
+project(':apklibapp').projectDir = new File(settingsDir, "application")
+rootProject.name = 'example'
