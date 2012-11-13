@@ -10,11 +10,11 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath "ru.yandex.android.tools:gradle-android-plugin:1.00"
+        classpath "ru.yandex.android.tools:gradle-android-plugin:1.03"
     }
 }
 
-apply plugin: 'apklib'
+apply plugin: 'yapklib'
 
 repositories {
     mavenCentral()

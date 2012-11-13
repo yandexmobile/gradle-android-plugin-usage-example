@@ -10,7 +10,7 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath "ru.yandex.android.tools:gradle-android-plugin:1.00"
+        classpath "ru.yandex.android.tools:gradle-android-plugin:1.03"
     }
 }
 
@@ -37,7 +37,7 @@ task wrapper(type: Wrapper) {
 }
 
 configure(project('apklibapp')) {
-    apply plugin: 'apklib'
+    apply plugin: 'yapklib'
     prebuild.dependsOn(":apklib:uploadArchives")
 }
 
